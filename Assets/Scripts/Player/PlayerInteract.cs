@@ -22,11 +22,17 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        interact = true;
+        if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
+        {
+            interact = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        interact = false;
+        if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
+        {
+            interact = false;
+        }
     }
 }
