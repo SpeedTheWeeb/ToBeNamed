@@ -35,7 +35,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
+        if(other.CompareTag("Object"))
         {
             interactText.gameObject.SetActive(true);
             interact = true;
@@ -45,7 +45,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
+        if(other.CompareTag("Object"))
         {
             interactText.gameObject.SetActive(false);
             interact = false;
