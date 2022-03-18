@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerInteract : MonoBehaviour
 {
+    public Text interactText;
+    GameObject _object;
     public bool interact = false;
+    bool isHolding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +17,19 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Interact") && interact)
+        //Pick up nearby object
+        if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding)
         {
-            Debug.Log("Hello");
+            _object.transform.parent = transform;
+            _object.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            interactText.gameObject.SetActive(false);
+            isHolding = true;
+        }
+        //Drop holding object
+        else if(Input.GetButtonDown("Interact") && isHolding)
+        {
+            _object.transform.parent = null;
+            isHolding = false;
         }
     }
 
@@ -24,7 +37,9 @@ public class PlayerInteract : MonoBehaviour
     {
         if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
         {
+            interactText.gameObject.SetActive(true);
             interact = true;
+            _object = other.gameObject;
         }
     }
 
@@ -32,7 +47,9 @@ public class PlayerInteract : MonoBehaviour
     {
         if(!other.CompareTag("Player") && !other.CompareTag("Wall"))
         {
+            interactText.gameObject.SetActive(false);
             interact = false;
+            _object = null;
         }
     }
 }
