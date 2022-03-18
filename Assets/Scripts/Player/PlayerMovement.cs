@@ -21,16 +21,18 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         hInput = Input.GetAxisRaw("Horizontal");
-        vInput = Input.GetAxisRaw("Vertical");
+        vInput = Input.GetAxisRaw("Vertical");        
+
     }
 
     private void FixedUpdate()
     {
-
         Vector3 direction = new Vector3(hInput, 0, vInput);
-        rb.velocity = direction * speedMultiplier;
+        Vector3 movement = direction * speedMultiplier;
+        movement.y = rb.velocity.y;
+        rb.velocity = movement;
 
-        if(hInput != 0 || vInput != 0)
+        if (hInput != 0 || vInput != 0)
         {
             var rotation = Quaternion.LookRotation(new Vector3(hInput, 0, vInput), Vector3.up);
             transform.rotation = rotation;
