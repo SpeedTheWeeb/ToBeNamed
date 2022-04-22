@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Object
+  - NPC
+  - Aura
   layers:
   - Default
   - TransparentFX
