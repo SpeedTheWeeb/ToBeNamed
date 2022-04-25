@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1144451384445229592}
   - component: {fileID: 4326059078226209434}
   - component: {fileID: 3144767815735387612}
+  - component: {fileID: 2453557576107723046}
   m_Layer: 0
   m_Name: Pirate
   m_TagString: NPC
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2453557576107723046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869743594013498038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369c23ca9d38d054c8de084e28b73be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine.UI;
 public class Aura : MonoBehaviour
 {
-    public static readonly string folder = "Assets/Text/";
+    public static readonly string folder = "Assets/Text/Auras/";
     public string[] text;
     public Text hoverText;
     string npcPrefab;
