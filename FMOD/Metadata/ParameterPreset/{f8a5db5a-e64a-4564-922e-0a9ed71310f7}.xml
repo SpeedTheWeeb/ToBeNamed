@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f8a5db5a-e64a-4564-922e-0a9ed71310f7}">
+		<property name="name">
+			<value>Deck</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7d593a16-021d-46a7-bd21-af83e80e9c3a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f7d43d96-ab63-4cd7-a732-94674ad241be}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f7d43d96-ab63-4cd7-a732-94674ad241be}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
