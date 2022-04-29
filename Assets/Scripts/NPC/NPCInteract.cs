@@ -7,30 +7,47 @@ using System.IO;
 using TMPro;
 public class NPCInteract : MonoBehaviour
 {
-    public static readonly string folder = "Assets/Text/Interact/";
+    public static readonly string tFolder = "Assets/Text/Interact/";
+    public static readonly string iFolder = "Pictures/";
     public string sceneChecker;
-    public Texture PirateA;
-    public Texture PirateB;
-    public RawImage ImageA;
-    public RawImage ImageB;
+    public RawImage uiImg;
+    //public RawImage ImageB;
     string npcPrefab;
     string[] text;
+    string[] line;
     bool playerInteract = false;
     public GameObject canvas;
     public TextMeshProUGUI diaText;
+
+    // Checks if in dialogue interface
+    bool inDialogue = false;
+
+    // Checks if it's time to switch character
+    bool _chara = false;
+
+    //Check íf it's still the current character talking
+    bool _line = false;
+
+
+    int currentLine = 0;
+    int currentDia = 0;
     // Start is called before the first frame update
     void Start()
     {
         npcPrefab = transform.name;
-        text = File.ReadAllLines(folder + npcPrefab + "Dia.txt");
+        text = File.ReadAllLines(tFolder + npcPrefab + "Dia.txt");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Interact") && playerInteract)
+        if(Input.GetButtonDown("Interact") && playerInteract && !_line)
         {
             PauseGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && _line)
+        {
+            NextLine();
         }
     }
 
@@ -53,29 +70,61 @@ public class NPCInteract : MonoBehaviour
     {
         canvas.SetActive(true);
         Time.timeScale = 0f;
-        PlayScene();
+        StartDialouge();
     }
 
-    void PlayScene()
+    void StartDialouge()
     {
-        ImageA.texture = PirateA;
-        ImageB.texture = PirateB;
-        StartCoroutine(DialougeRoutine());
+        inDialogue = true;
+        NextCharacter();
     }
-    IEnumerator DialougeRoutine()
+
+    void NextLine()
     {
-        foreach(string dialouge in text)
+        if(line.Length == currentLine)
         {
-            diaText.text = dialouge;
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            _line = false;
+            currentLine = 0;
+            NextCharacter();
         }
-        EndScene();
+
+        diaText.text = line[currentLine];
+        Debug.Log(currentDia+" " +currentLine);
+        currentLine++;
+    }
+
+    void NextCharacter()
+    {
+        if(currentDia == text.Length)
+        {
+            EndScene();
+        }
+        string[] nameSplitter = text[currentDia].Split(':');
+        Texture io = Resources.Load(iFolder + nameSplitter[0]) as Texture;
+        uiImg.texture = io;
+        if(nameSplitter[1].Contains("_"))
+        {
+            line = nameSplitter[1].Split('_');
+        }
+        else
+        {
+            line = new string[] { nameSplitter[1]};
+        }
+        currentDia++;
+        _line = true;
+        _chara = false;
+        NextLine();
     }
 
     void EndScene()
     {
         canvas.SetActive(false);
+        currentLine = 0;
+        currentDia = 0;
         Time.timeScale = 1f;
+        inDialogue = false;
+        _line = false;
+        _chara = false;
     }
 
 }
