@@ -31,7 +31,10 @@ public class DialogueScript : MonoBehaviour
 
     public void StartDialogue(string scene)
     {
+        currentLine = 0;
+        currentDia = 0;
         text = File.ReadAllLines(tFolder + scene + ".txt");
+        Debug.Log(currentDia + " " + currentLine);
         PauseGame();
     }
     // Update is called once per frame
@@ -58,9 +61,7 @@ public class DialogueScript : MonoBehaviour
             currentLine = 0;
             NextCharacter();
         }
-
         diaText.text = line[currentLine];
-        Debug.Log(currentDia + " " + currentLine);
         currentLine++;
     }
 
@@ -88,13 +89,14 @@ public class DialogueScript : MonoBehaviour
     }
 
     void EndScene()
-    {
-        canvas.SetActive(false);
+    {        
         currentLine = 0;
         currentDia = 0;
         Time.timeScale = 1f;
         inDialogue = false;
         _line = false;
         _chara = false;
+        Debug.Log(currentDia + " " + currentLine);
+        canvas.SetActive(false);
     }
 }
