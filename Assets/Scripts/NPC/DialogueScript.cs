@@ -7,7 +7,7 @@ using System.IO;
 using TMPro;
 public class DialogueScript : MonoBehaviour
 {
-    public static readonly string tFolder = "Assets/Text/Interact/";
+    public static readonly string tFolder = "Text/Interact/";
     public static readonly string iFolder = "Pictures/";
     public string sceneChecker;
     public RawImage uiImg;
@@ -33,7 +33,10 @@ public class DialogueScript : MonoBehaviour
     {
         currentLine = 0;
         currentDia = 0;
-        text = File.ReadAllLines(tFolder + scene + ".txt");
+        var file = Resources.Load<TextAsset>(tFolder + scene);
+        Debug.Log(file);
+        var content = file.text;
+        text = content.Split('\n');
         Debug.Log(currentDia + " " + currentLine);
         PauseGame();
     }

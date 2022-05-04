@@ -6,8 +6,9 @@ using System.IO;
 using UnityEngine.UI;
 public class Aura : MonoBehaviour
 {
-    public static readonly string folder = "Assets/Text/Auras/";
+    public static readonly string folder = "Text/Auras/";
     public string[] text;
+    public string npc;
     public Text hoverText;
     string npcPrefab;
     public bool inAura = false;
@@ -15,7 +16,9 @@ public class Aura : MonoBehaviour
     void Start()
     {
         npcPrefab = transform.parent.name;
-        text = File.ReadAllLines(folder + npcPrefab+".txt");
+        var file = Resources.Load<TextAsset>(folder + npc);
+        var content = file.text;
+        text = content.Split('\n');
     }
 
     // Update is called once per frame
