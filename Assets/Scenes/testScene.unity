@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: []
+  npc: Pirate
   hoverText: {fileID: 11071782}
   inAura: 0
 --- !u!135 &529547449
