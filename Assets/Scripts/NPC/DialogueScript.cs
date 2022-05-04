@@ -37,7 +37,6 @@ public class DialogueScript : MonoBehaviour
         Debug.Log(file);
         var content = file.text;
         text = content.Split('\n');
-        Debug.Log(currentDia + " " + currentLine);
         PauseGame();
     }
     // Update is called once per frame
@@ -64,8 +63,11 @@ public class DialogueScript : MonoBehaviour
             currentLine = 0;
             NextCharacter();
         }
-        diaText.text = line[currentLine];
-        currentLine++;
+        else
+        {
+            diaText.text = line[currentLine];
+            currentLine++;
+        }
     }
 
     void NextCharacter()
@@ -74,21 +76,24 @@ public class DialogueScript : MonoBehaviour
         {
             EndScene();
         }
-        string[] nameSplitter = text[currentDia].Split(':');
-        Texture io = Resources.Load(iFolder + nameSplitter[0]) as Texture;
-        uiImg.texture = io;
-        if (nameSplitter[1].Contains("_"))
-        {
-            line = nameSplitter[1].Split('_');
-        }
         else
         {
-            line = new string[] { nameSplitter[1] };
+            string[] nameSplitter = text[currentDia].Split(':');
+            Texture io = Resources.Load(iFolder + nameSplitter[0]) as Texture;
+            uiImg.texture = io;
+            if (nameSplitter[1].Contains("_"))
+            {
+                line = nameSplitter[1].Split('_');
+            }
+            else
+            {
+                line = new string[] { nameSplitter[1] };
+            }
+            currentDia++;
+            _line = true;
+            _chara = false;
+            NextLine();
         }
-        currentDia++;
-        _line = true;
-        _chara = false;
-        NextLine();
     }
 
     void EndScene()
@@ -99,7 +104,6 @@ public class DialogueScript : MonoBehaviour
         inDialogue = false;
         _line = false;
         _chara = false;
-        Debug.Log(currentDia + " " + currentLine);
         canvas.SetActive(false);
     }
 }
