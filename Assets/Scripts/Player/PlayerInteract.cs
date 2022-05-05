@@ -23,12 +23,16 @@ public class PlayerInteract : MonoBehaviour
         //Pick up nearby object
         if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding)
         {
-            if (_object.name != "SwitchCube")
+            if (_object.name != "SwitchCube" && isNight)
             {
                 _object.transform.parent = transform;
                 _object.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 interactText.gameObject.SetActive(false);
                 isHolding = true;
+            }
+            else if(_object.name != "SwitchCube" && !isNight)
+            {
+                interactText.text = "This is a ball";
             }
             else if(_object.name == "SwitchCube")
             {
@@ -76,6 +80,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if(other.CompareTag("Object"))
         {
+            interactText.text = "Interact";
             interactText.gameObject.SetActive(false);
             interact = false;
             _object = null;
