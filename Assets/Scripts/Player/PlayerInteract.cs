@@ -33,7 +33,7 @@ public class PlayerInteract : MonoBehaviour
             }
             else if(_object.name != "SwitchCube" && !isNight)
             {
-                interactText.text = "This is a ball";
+                interactText.text = "This is the world's smoothest knife";
             }
             else if(_object.name == "SwitchCube")
             {
