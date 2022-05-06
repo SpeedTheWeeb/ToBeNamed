@@ -153,6 +153,36 @@ Transform:
   m_Father: {fileID: 1568786342}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &136263177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136263178}
+  m_Layer: 0
+  m_Name: objSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136263178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136263177}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 344.5, y: 3.72, z: -11.02}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &175146171 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1131908070795664075, guid: 4e4c81dac9f080748af2149d9d67023c, type: 3}
@@ -453,7 +483,7 @@ Transform:
   - {fileID: 1717239035}
   - {fileID: 1683493856}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &684426980
 PrefabInstance:
@@ -1120,7 +1150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.8562, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1015588224 stripped
 MonoBehaviour:
@@ -1226,7 +1256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273539329
 GameObject:
@@ -2020,10 +2050,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1617225273f74143a118785b88a7b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objSpawnPoint: {fileID: 136263177}
   _light: {fileID: 1623604838}
   interactText: {fileID: 696686866}
-  _object: {fileID: 0}
+  _object: {fileID: 136263177}
   interact: 0
+  isHolding: 0
 --- !u!1 &1955587983
 GameObject:
   m_ObjectHideFlags: 0

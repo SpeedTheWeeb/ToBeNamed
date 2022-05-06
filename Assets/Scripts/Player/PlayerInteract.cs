@@ -5,13 +5,16 @@ using UnityEngine.UI;
 using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
+    public GameObject objSpawnPoint;
     public Light _light;
     public TextMeshProUGUI interactText;
     public GameObject _object;
     public bool interact = false;
-    bool isHolding = false;
+    public bool isHolding = false;
     bool isNight = false;
     GameObject[] pirates;
+    GameObject holdingObj;
+    string sc = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,13 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         //Pick up nearby object
-        if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding)
+        if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding && holdingObj == null)
         {
             if (_object.name != "SwitchCube" && isNight)
             {
-                _object.transform.parent = transform;
-                _object.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+                holdingObj = _object;
+                holdingObj.transform.parent = transform;
+                holdingObj.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
                 interactText.gameObject.SetActive(false);
                 isHolding = true;
             }
@@ -45,6 +49,7 @@ public class PlayerInteract : MonoBehaviour
                     {
                         allPirate.SetActive(false);
                     }
+                          
                     isNight = true;
                 }
                 else
@@ -60,10 +65,15 @@ public class PlayerInteract : MonoBehaviour
             }
         }
         //Drop holding object
-        else if(Input.GetButtonDown("Interact") && isHolding)
+
+        else if(Input.GetButtonDown("Interact") && isHolding && sc != "SwitchCube")
         {
-            _object.transform.parent = null;
+            holdingObj.transform.position = new Vector3(holdingObj.transform.position.x, holdingObj.transform.position.y-3, holdingObj.transform.position.z);
+            holdingObj.transform.parent = null;
+            holdingObj = null;
             isHolding = false;
+            _object = null;
+            interact = false;
         }
     }
 
@@ -74,6 +84,7 @@ public class PlayerInteract : MonoBehaviour
             interactText.gameObject.SetActive(true);
             interact = true;
             _object = other.gameObject;
+            sc = other.name;
         }
     }
 
@@ -85,6 +96,7 @@ public class PlayerInteract : MonoBehaviour
             interactText.gameObject.SetActive(false);
             interact = false;
             _object = null;
+            sc = "";
         }
     }
 }
