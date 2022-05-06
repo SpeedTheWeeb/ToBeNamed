@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{9cb3815c-5872-43cb-9cd2-48bbc5be32ba}">
+		<property name="assetPath">
+			<value>BGM/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{97d8c913-8655-4479-ba3e-c064d00e4bd7}</destination>
+		</relationship>
+	</object>
+</objects>
