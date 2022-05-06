@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
     public Light _light;
-    public Text interactText;
+    public TextMeshProUGUI interactText;
     public GameObject _object;
     public bool interact = false;
     bool isHolding = false;
