@@ -444,6 +444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1052352020877927850, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
+      propertyPath: sceneChecker
+      value: D1plan
+      objectReference: {fileID: 0}
     - target: {fileID: 4601190701221519902, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_Name
       value: Pirate
@@ -710,7 +714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1052352020877927850, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: sceneChecker
-      value: 1.A-2
+      value: D1ratspox
       objectReference: {fileID: 0}
     - target: {fileID: 4601190701221519902, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_Name
