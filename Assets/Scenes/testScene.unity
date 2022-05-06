@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1032,10 +1032,10 @@ RectTransform:
   m_Father: {fileID: 1833296180}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 216.90942, y: 915.6365}
-  m_SizeDelta: {x: -919.3987, y: 406.6929}
+  m_AnchorMin: {x: 0.34647685, y: 0}
+  m_AnchorMax: {x: 1, y: 0.7133267}
+  m_AnchoredPosition: {x: 146, y: -18.5}
+  m_SizeDelta: {x: -296, y: -37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167210054
 MonoBehaviour:
@@ -1059,8 +1059,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: beb6a2fbc02097f4d9ade85b89891d17, type: 2}
+  m_sharedMaterial: {fileID: -7667497757976031451, guid: beb6a2fbc02097f4d9ade85b89891d17, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -311.22406, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2135,10 +2135,10 @@ RectTransform:
   m_Father: {fileID: 1833296180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -610.75964, y: 918.1205}
-  m_SizeDelta: {x: -1978.8848, y: 257.9253}
+  m_AnchorMin: {x: 0, y: 0.7133267}
+  m_AnchorMax: {x: 0.15778734, y: 1}
+  m_AnchoredPosition: {x: 435, y: -433}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811495040
 MonoBehaviour:
