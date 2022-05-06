@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
+    public string day;
+    public static readonly string Folder = "Text/Player/";
     public GameObject objSpawnPoint;
     public Light _light;
     public TextMeshProUGUI interactText;
@@ -37,7 +39,18 @@ public class PlayerInteract : MonoBehaviour
             }
             else if(_object.name != "SwitchCube" && !isNight)
             {
-                interactText.text = "This is the world's smoothest knife";
+                var file = Resources.Load<TextAsset>(Folder + day);
+                var content = file.text;
+                var text = content.Split('\n');
+                foreach(var t in text)
+                {
+                    var split = t.Split(':');
+                    if(split[0] == _object.name)
+                    {
+                        interactText.text = split[1];
+                    }
+                }
+
             }
             else if(_object.name == "SwitchCube")
             {
