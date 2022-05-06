@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
             if (_object.name != "SwitchCube" && isNight)
             {
                 _object.transform.parent = transform;
-                _object.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                _object.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
                 interactText.gameObject.SetActive(false);
                 isHolding = true;
             }
