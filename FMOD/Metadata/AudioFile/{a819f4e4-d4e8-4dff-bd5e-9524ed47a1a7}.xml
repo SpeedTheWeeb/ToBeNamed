@@ -4,9 +4,6 @@
 		<property name="assetPath">
 			<value>wind_general_soft_low_loop_05.wav</value>
 		</property>
-		<property name="isStreaming">
-			<value>true</value>
-		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
 		</property>
