@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f24a3c22-d6a4-4933-877b-7dcbaf1be2b5}">
+		<property name="assetPath">
+			<value>BGM/Day Upper Deck.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>80.822857142857146</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{97d8c913-8655-4479-ba3e-c064d00e4bd7}</destination>
+		</relationship>
+	</object>
+</objects>
