@@ -289,6 +289,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &352503821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4287868585612426302, guid: c8ae590ecf35ef8449c2d4e4f5306d01, type: 3}
+  m_PrefabInstance: {fileID: 684426980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &352503824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352503821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adf0b2f7df37f94da5dfa21890ffc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNight: 0
+  _light: {fileID: 1623604838}
 --- !u!1 &412727707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,51 +1281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1151147162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1151147164}
-  - component: {fileID: 1151147163}
-  m_Layer: 0
-  m_Name: ScriptObj
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1151147163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151147162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adf0b2f7df37f94da5dfa21890ffc31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isNight: 0
-  _light: {fileID: 1623604838}
---- !u!4 &1151147164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151147162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.803555, y: -250.3157, z: 1683.3071}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216133532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1617225273f74143a118785b88a7b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptobj: {fileID: 1151147162}
+  scriptobj: {fileID: 352503821}
   day: Day 1
   objSpawnPoint: {fileID: 136263177}
   interactText: {fileID: 696686866}
