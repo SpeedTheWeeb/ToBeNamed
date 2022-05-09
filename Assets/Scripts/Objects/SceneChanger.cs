@@ -27,11 +27,11 @@ public class SceneChanger : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
                 if(getResult == 1)
                 {
-                    SceneManager.LoadScene("DAy 2A");
+                    SceneManager.LoadScene("Day 2A");
                 }
                 else if(getResult == 2)
                 {
-                    SceneManager.LoadScene("DAy 2B");
+                    SceneManager.LoadScene("Day 2B");
                 }
                 break;
             case "Day 2A":
