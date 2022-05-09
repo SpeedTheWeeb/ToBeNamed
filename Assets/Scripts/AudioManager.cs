@@ -41,22 +41,27 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
     private void Start()
     {
         FMODStartBGM();
     }
+
     public void FMODStartBGM()
     {
+        
         mainBGM.start();
     }
 
     public void FMODToggleTOD()
     {
-        mainBGM.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        mainBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         if (night == 0)
-            night = 1f;
+            night = 1f;                        
         else
             night = 0f;
+        mainBGM.setParameterByName("night", night);
+        FMODDayChecker();
         mainBGM.start();
     }
 
@@ -66,6 +71,7 @@ public class AudioManager : MonoBehaviour
             deck = 1f;
         else
             deck = 0f;
+        mainBGM.setParameterByName("deck", deck);
     }
 
     public void FMODDayChecker()
@@ -74,5 +80,6 @@ public class AudioManager : MonoBehaviour
             day2 = 0f;
         else if (scene.name == "Day 2A" || scene.name == "Day 2B")
             day2 = 1f;
+        mainBGM.setParameterByName("day2", day2);
     }
 }
