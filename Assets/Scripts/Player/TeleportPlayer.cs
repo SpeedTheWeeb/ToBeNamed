@@ -9,7 +9,7 @@ public class TeleportPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class TeleportPlayer : MonoBehaviour
         {
             Debug.Log(tpPoint.transform.position);
             Player.transform.position = tpPoint.transform.position;
+            FindObjectOfType<AudioManager>().FMODToggleDeck();
         }
     }
 }

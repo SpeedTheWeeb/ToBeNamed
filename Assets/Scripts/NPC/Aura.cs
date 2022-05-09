@@ -10,13 +10,12 @@ public class Aura : MonoBehaviour
     public string[] text;
     public string npc;
     public Text hoverText;
-    string npcPrefab;
+    public string auraText;
     public bool inAura = false;
     // Start is called before the first frame update
     void Start()
     {
-        npcPrefab = transform.parent.name;
-        var file = Resources.Load<TextAsset>(folder + npc);
+        var file = Resources.Load<TextAsset>(folder + auraText);
         var content = file.text;
         text = content.Split('\n');
     }

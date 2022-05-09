@@ -16,11 +16,6 @@ public class DialogueScript : MonoBehaviour
     string[] line;
     public GameObject canvas;
     public TextMeshProUGUI diaText;
-    // Checks if in dialogue interface
-    bool inDialogue = false;
-
-    // Checks if it's time to switch character
-    bool _chara = false;
 
     //Check íf it's still the current character talking
     bool _line = false;
@@ -51,7 +46,6 @@ public class DialogueScript : MonoBehaviour
     {
         canvas.SetActive(true);
         Time.timeScale = 0f;        
-        inDialogue = true;
         NextCharacter();
     }
 
@@ -91,7 +85,6 @@ public class DialogueScript : MonoBehaviour
             }
             currentDia++;
             _line = true;
-            _chara = false;
             NextLine();
         }
     }
@@ -101,9 +94,7 @@ public class DialogueScript : MonoBehaviour
         currentLine = 0;
         currentDia = 0;
         Time.timeScale = 1f;
-        inDialogue = false;
         _line = false;
-        _chara = false;
         canvas.SetActive(false);
     }
 }

@@ -5,27 +5,28 @@ using UnityEngine.UI;
 using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
+    public GameObject scriptobj;
+    TimeChanger time;
     public string day;
     public static readonly string Folder = "Text/Player/";
     public GameObject objSpawnPoint;
-    public Light _light;
     public TextMeshProUGUI interactText;
     public GameObject _object;
     public bool interact = false;
     public bool isHolding = false;
-    bool isNight = false;
-    GameObject[] pirates;
+    bool isNight;
     GameObject holdingObj;
     string sc = "";
     // Start is called before the first frame update
     void Start()
     {
-       pirates = GameObject.FindGameObjectsWithTag("NPC");
+        time = scriptobj.GetComponent<TimeChanger>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        isNight = time.isNight;
         //Pick up nearby object
         if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding && holdingObj == null)
         {
@@ -54,27 +55,7 @@ public class PlayerInteract : MonoBehaviour
             }
             else if(_object.name == "SwitchCube")
             {
-                if(!isNight)
-                {
-                    Debug.Log("Is Night");
-                    _light.color = new Color(34f/255f, 31f/255f, 185f/255f);
-                    foreach(GameObject allPirate in pirates)
-                    {
-                        allPirate.SetActive(false);
-                    }
-                          
-                    isNight = true;
-                }
-                else
-                {
-                    Debug.Log("Is Day");
-                    _light.color = new Color(248f/255f, 211f/255f, 81f/255f);
-                    foreach (GameObject allPirate in pirates)
-                    {
-                        allPirate.SetActive(true);
-                    }
-                    isNight = false;
-                }
+                time.changeTime();
             }
         }
         //Drop holding object

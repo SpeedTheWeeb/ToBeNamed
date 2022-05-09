@@ -7,7 +7,6 @@ using System.IO;
 using TMPro;
 public class NPCInteract : MonoBehaviour
 {
-
     GameObject textObj;
     public string sceneChecker;
     bool playerInteract = false;
