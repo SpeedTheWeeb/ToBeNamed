@@ -8,6 +8,7 @@ public class TimeChanger : MonoBehaviour
     public bool isNight;
     GameObject[] pirates;
     public Light _light;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class TimeChanger : MonoBehaviour
             {
                 allPirate.SetActive(false);
             }
-
+            FindObjectOfType<AudioManager>().FMODToggleTOD();
             isNight = true;
         }
         else
@@ -41,6 +42,7 @@ public class TimeChanger : MonoBehaviour
             {
                 allPirate.SetActive(true);
             }
+            FindObjectOfType<AudioManager>().FMODToggleTOD();
             isNight = false;
         }
     }

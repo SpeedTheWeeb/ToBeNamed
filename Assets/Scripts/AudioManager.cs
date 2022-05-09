@@ -41,6 +41,10 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    private void Start()
+    {
+        FMODStartBGM();
+    }
     public void FMODStartBGM()
     {
         mainBGM.start();
