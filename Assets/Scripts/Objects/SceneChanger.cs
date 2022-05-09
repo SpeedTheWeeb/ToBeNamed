@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
+    public GameObject[] gameObjects;
     Scene currentScene;
     public GameObject robe;
     public int getResult = 0;
-    public GameObject ship;
-    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +22,11 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene()
     {
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(player);
-        DontDestroyOnLoad(ship);
+        foreach(var obj in gameObjects)
+        {
+            DontDestroyOnLoad(obj);
+        }
+        
         switch (currentScene.name)
         {
             case "Day 1":
