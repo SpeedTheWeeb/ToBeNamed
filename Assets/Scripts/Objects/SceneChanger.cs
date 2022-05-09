@@ -6,7 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     Scene currentScene;
     public GameObject robe;
-    public int getResult;
+    public int getResult = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +25,11 @@ public class SceneChanger : MonoBehaviour
         {
             case "Day 1":
                 DontDestroyOnLoad(gameObject);
-                if(getResult == 1)
+                if(getResult != 0)
                 {
                     SceneManager.LoadScene("Day 2A");
                 }
-                else if(getResult == 2)
+                else if(getResult == 0)
                 {
                     SceneManager.LoadScene("Day 2B");
                 }
