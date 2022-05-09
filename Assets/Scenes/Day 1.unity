@@ -798,6 +798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate
       objectReference: {fileID: 0}
+    - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
+      propertyPath: auraText
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 8916559568196922173, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1509,6 +1513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
+      propertyPath: auraText
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 8916559568196922173, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2190,7 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1617225273f74143a118785b88a7b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptobj: {fileID: 0}
+  scriptobj: {fileID: 1151147162}
   day: Day 1
   objSpawnPoint: {fileID: 136263177}
   interactText: {fileID: 696686866}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CutRope : MonoBehaviour
 {
     public bool isInteractable;
+    GameObject interactedObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class CutRope : MonoBehaviour
     {
         if(Input.GetButtonDown("Interact") && isInteractable)
         {
+            Debug.Log(interactedObj.name);
             Destroy(gameObject);
         }
     }
@@ -23,6 +25,7 @@ public class CutRope : MonoBehaviour
     {
         if(other.CompareTag("Object"))
         {
+            interactedObj = other.gameObject;
             isInteractable = true;
         }
     }
