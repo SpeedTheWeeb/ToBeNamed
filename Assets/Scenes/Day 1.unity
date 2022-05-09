@@ -306,10 +306,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312feabd2aab064ca596d0bf2984caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 930568142}
+  - {fileID: 9011268092744651254}
+  - {fileID: 1623604837}
+  - {fileID: 1970036081}
+  - {fileID: 412727707}
+  - {fileID: 1980632878}
   robe: {fileID: 982715045}
   getResult: 0
-  ship: {fileID: 842461622}
-  player: {fileID: 9011268092744651254}
 --- !u!114 &352503824
 MonoBehaviour:
   m_ObjectHideFlags: 0

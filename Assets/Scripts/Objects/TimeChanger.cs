@@ -18,6 +18,7 @@ public class TimeChanger : MonoBehaviour
 
     public void changeTime()
     {
+        DontDestroyOnLoad(_light);
         if(!isNight)
         {
             Debug.Log("Is Night");
