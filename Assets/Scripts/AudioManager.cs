@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public EventInstance mainBGM;
+    public EventInstance creakSFX;
+    public EventInstance waveSFX;
+    public EventInstance windSFX;
     public float deck;
     public float night;
     public float day2;
@@ -20,6 +23,9 @@ public class AudioManager : MonoBehaviour
         ManageSingleton();
         scene = SceneManager.GetActiveScene();
         mainBGM = RuntimeManager.CreateInstance("event:/bgm/main");
+        creakSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/creak");
+        waveSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/waves");
+        windSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/wind");
         deck = 1f;
         night = 0f;
         day2 = 0f;
@@ -44,13 +50,16 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        FMODStartBGM();
+        FMODStartBGM();        
     }
 
     public void FMODStartBGM()
     {
         
         mainBGM.start();
+        creakSFX.start();
+        waveSFX.start();
+        windSFX.start();
     }
 
     public void FMODToggleTOD()
@@ -60,8 +69,7 @@ public class AudioManager : MonoBehaviour
             night = 1f;                        
         else
             night = 0f;
-        mainBGM.setParameterByName("night", night);
-        FMODDayChecker();
+        mainBGM.setParameterByName("night", night);        
         mainBGM.start();
     }
 
