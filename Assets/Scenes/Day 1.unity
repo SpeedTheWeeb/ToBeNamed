@@ -3474,6 +3474,7 @@ MonoBehaviour:
   - {fileID: 1970036081}
   - {fileID: 412727707}
   - {fileID: 1980632878}
+  - {fileID: 352503821}
   robe: {fileID: 982715045}
   getResult: 0
 --- !u!114 &352503824
@@ -8090,13 +8091,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930568142}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: -8.8, y: 34.85, z: -12.25}
+  m_LocalRotation: {x: 0, y: -0.86602545, z: 0.49999994, w: 0}
+  m_LocalPosition: {x: -8.8, y: 41.41, z: 16.56}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 120, y: 0, z: 180}
 --- !u!114 &930568146
 MonoBehaviour:
   m_ObjectHideFlags: 0
