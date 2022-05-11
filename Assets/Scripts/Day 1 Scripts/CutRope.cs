@@ -8,6 +8,7 @@ public class CutRope : MonoBehaviour
     GameObject interactedObj;
     public GameObject sChanger;
     SceneChanger changer;
+    FMODOneShots fmodSFX; //untested
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class CutRope : MonoBehaviour
             {
                 case "Knife":
                     changer.getResult = 1;
+                    fmodSFX.SFXOneShots(); //untested
                     break;
                 case "Potion":
                     changer.getResult = 2;
