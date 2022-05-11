@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        FMODStartBGM();        
+        FMODStartBGM();
     }
 
     public void FMODStartBGM()
@@ -64,11 +64,11 @@ public class AudioManager : MonoBehaviour
 
     public void FMODToggleTOD()
     {
-        mainBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        mainBGM.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         if (night == 0)
             night = 1f;                        
-        else
-            night = 0f;
+        else        
+            night = 0f;        
         mainBGM.setParameterByName("night", night);        
         mainBGM.start();
     }
@@ -84,6 +84,7 @@ public class AudioManager : MonoBehaviour
 
     public void FMODDayChecker()
     {
+        scene = SceneManager.GetActiveScene();
         if (scene.name == "Day 1")
             day2 = 0f;
         else if (scene.name == "Day 2A" || scene.name == "Day 2B")

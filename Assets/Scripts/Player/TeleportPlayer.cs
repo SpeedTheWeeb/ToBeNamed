@@ -22,7 +22,8 @@ public class TeleportPlayer : MonoBehaviour
         {
             Debug.Log(tpPoint.transform.position);
             Player.transform.position = tpPoint.transform.position;
-            FindObjectOfType<AudioManager>().FMODToggleDeck();
+            if(tpPoint.name == "UnderUpperTP" || tpPoint.name == "UpperTP")
+                FindObjectOfType<AudioManager>().FMODToggleDeck();
         }
     }
 }
