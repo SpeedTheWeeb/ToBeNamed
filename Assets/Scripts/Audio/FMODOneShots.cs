@@ -7,7 +7,7 @@ using FMODUnity;
 public class FMODOneShots : MonoBehaviour
 {
     public string eventName;
-    void SFXOneShots()
+    public void SFXOneShots()
     {
         RuntimeManager.PlayOneShot("event:/sfx/oneshots/" + eventName);
         /*
