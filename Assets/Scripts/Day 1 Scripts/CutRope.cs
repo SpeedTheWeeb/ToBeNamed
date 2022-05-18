@@ -9,6 +9,7 @@ public class CutRope : MonoBehaviour
     public GameObject sChanger;
     SceneChanger changer;
     FMODOneShots fmodSFX; //untested
+
     // Start is called before the first frame update
     void Start()
     {

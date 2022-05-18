@@ -19980,6 +19980,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   Effect: {fileID: 42847583}
+--- !u!114 &933360999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933360997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e26c0cd92ce0e4449f737f57eb3cbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: pot_bubble
 --- !u!1001 &935356113
 PrefabInstance:
   m_ObjectHideFlags: 0

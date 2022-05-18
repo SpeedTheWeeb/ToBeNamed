@@ -7,6 +7,8 @@ public class MixSoup : MonoBehaviour
     public bool isInteractable;
     GameObject interactedObj;
     public GameObject Effect;
+    FMODOneShots fmodSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class MixSoup : MonoBehaviour
             {
                 case "Antidote":
                     Effect.gameObject.SetActive(true);
+                    //fmodSFX.SFXOneShots();
                     break;
                 case "Potion":
                     break;
