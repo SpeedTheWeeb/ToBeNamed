@@ -10,9 +10,11 @@ public class NPCInteract : MonoBehaviour
     GameObject textObj;
     public string sceneChecker;
     bool playerInteract = false;
+    SceneChanger changer;
     void Start()
     {
         textObj = GameObject.Find("ScriptObj");
+        changer = textObj.GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,17 @@ public class NPCInteract : MonoBehaviour
     }
     void StartDia()
     {
+        if(sceneChecker == "d1React")
+        {
+            if(changer.getResult == 1)
+            {
+                sceneChecker = "D2Aplan.sabo";
+            }
+            else if(changer.getResult == 2)
+            {
+                sceneChecker = "D2Aplan.rats";
+            }
+        }
         DialogueScript dialogue = textObj.GetComponent<DialogueScript>();
         dialogue.StartDialogue(sceneChecker);
     }
