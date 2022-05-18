@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using TMPro;
+using System.Linq;
 public class DialogueScript : MonoBehaviour
 {
     public static readonly string tFolder = "Text/Interact/";
@@ -28,10 +29,16 @@ public class DialogueScript : MonoBehaviour
     {
         currentLine = 0;
         currentDia = 0;
+
+        //Gets dialogue text from txt file
         var file = Resources.Load<TextAsset>(tFolder + scene);
         Debug.Log(file);
         var content = file.text;
         text = content.Split('\n');
+
+        //Removes accidental extra lines in txt file
+        string toRemove = "";
+        text = text.Where(val => val != toRemove).ToArray();
         PauseGame();
     }
     // Update is called once per frame
