@@ -12,15 +12,17 @@ public class TimeChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pirates = GameObject.FindGameObjectsWithTag("NPC");
+        
         changer = gameObject.GetComponent<SceneChanger>();
     }
 
     public void changeTime()
     {
+        pirates = GameObject.FindGameObjectsWithTag("NPC");
         DontDestroyOnLoad(_light);
         if(!isNight)
         {
+            
             Debug.Log("Is Night");
             _light.color = new Color(34f / 255f, 31f / 255f, 185f / 255f);
             foreach (GameObject allPirate in pirates)
