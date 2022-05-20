@@ -28,7 +28,7 @@ public class MixSoup : MonoBehaviour
             switch (interactedObj.name)
             {
                 case "Antidote":
-                    Effect.gameObject.SetActive(true);
+                    Effect.gameObject.SetActive(false);
                     fmodSFX.SFXOneShots("pot_bubble");
                     break;
                 case "Potion":
