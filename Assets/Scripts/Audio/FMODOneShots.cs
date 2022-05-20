@@ -6,10 +6,9 @@ using FMODUnity;
 
 public class FMODOneShots : MonoBehaviour
 {
-    public string eventName;
-    public void SFXOneShots()
+    public void SFXOneShots(string eventName)
     {
-        RuntimeManager.PlayOneShot("event:/sfx/oneshots/" + eventName);
+        RuntimeManager.PlayOneShot("event:/sfx/oneshot/" + eventName);
         /*
          * label
          * open_door
