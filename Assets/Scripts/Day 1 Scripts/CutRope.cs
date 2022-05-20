@@ -27,7 +27,11 @@ public class CutRope : MonoBehaviour
             {
                 case "Knife":
                     changer.getResult = 1;
-                    fmodSFX.SFXOneShots("rope_cut"); //untested
+                    fmodSFX.SFXOneShots("rope_cut");
+                    break;
+                case "Candle": //NYI
+                    changer.getResult = 1;
+                    fmodSFX.SFXOneShots("rope_burn");
                     break;
                 case "Potion":
                     changer.getResult = 2;
