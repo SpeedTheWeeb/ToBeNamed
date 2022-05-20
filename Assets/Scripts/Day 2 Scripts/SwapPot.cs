@@ -8,6 +8,7 @@ public class SwapPot : MonoBehaviour
     public GameObject pos1;
     public GameObject pos2;
     GameObject pot;
+    public GameObject mainPot;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class SwapPot : MonoBehaviour
         if (Input.GetButtonDown("Interact") && isInteractable)
         {
             pot.transform.position = pos2.transform.position;
-            gameObject.transform.position = pos1.transform.position;
+            mainPot.transform.position = pos1.transform.position;
             Destroy(pot.GetComponent<Collider>());
         }
     }
