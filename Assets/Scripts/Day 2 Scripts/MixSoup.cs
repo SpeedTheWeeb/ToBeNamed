@@ -8,12 +8,9 @@ public class MixSoup : MonoBehaviour
     public GameObject interactedObj;
     public GameObject Effect;
     FMODOneShots fmodSFX;
-    GameObject player;
-    PlayerInteract pi;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Captain5");
     }
 
     // Update is called once per frame
@@ -21,22 +18,13 @@ public class MixSoup : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && isInteractable)
         {
-            Debug.Log(interactedObj.name);
-            switch (interactedObj.name)
-            {
-                case "Antidote":
-                    Effect.gameObject.SetActive(true);
-                    //fmodSFX.SFXOneShots();
-                    break;
-                case "Potion":
-                    break;
-            }
-            
+            Effect.gameObject.SetActive(true);
+            //fmodSFX.SFXOneShots();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Object"))
+        if (other.CompareTag("Object") && other.gameObject.name == "Antidote")
         {
             interactedObj = other.gameObject;
             isInteractable = true;
