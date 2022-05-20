@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
-    public float speedMultiplier = 10;
+    public float speedMultiplier = 15;
     public float rotateMultiplier = 100;
     float hInput;
     float vInput;

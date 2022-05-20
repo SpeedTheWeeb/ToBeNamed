@@ -37,7 +37,7 @@ public class TimeChanger : MonoBehaviour
             //Don't uncomment yet
             changer.ChangeScene();
             Debug.Log("Is Day");
-            _light.color = new Color(0 / 255f, 0 / 255f, 0 / 255f);
+            _light.color = new Color(255 / 255f, 255/ 255f, 255 / 255f);
             foreach (GameObject allPirate in pirates)
             {
                 allPirate.SetActive(true);
