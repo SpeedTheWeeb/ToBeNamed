@@ -15,7 +15,7 @@ public class PlayerInteract : MonoBehaviour
     public bool interact = false;
     public bool isHolding = false;
     bool isNight;
-    GameObject holdingObj;
+    public GameObject holdingObj;
     string sc = "";
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 holdingObj = _object;
                 holdingObj.transform.parent = transform;
-                holdingObj.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+                holdingObj.transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);
                 interactText.gameObject.SetActive(false);
                 isHolding = true;
             }

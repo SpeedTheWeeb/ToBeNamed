@@ -4989,7 +4989,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &214298642
 MeshRenderer:
@@ -24123,7 +24123,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1216133534
 MeshRenderer:
@@ -36454,6 +36454,7 @@ MonoBehaviour:
   _object: {fileID: 136263177}
   interact: 0
   isHolding: 0
+  holdingObj: {fileID: 0}
 --- !u!4 &1840065559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4550102745717880, guid: 639cf210cf78ce249ac9cfdad9ffe484, type: 3}

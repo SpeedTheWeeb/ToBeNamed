@@ -5,14 +5,15 @@ using UnityEngine;
 public class MixSoup : MonoBehaviour
 {
     public bool isInteractable;
-    GameObject interactedObj;
+    public GameObject interactedObj;
     public GameObject Effect;
     FMODOneShots fmodSFX;
-
+    GameObject player;
+    PlayerInteract pi;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Captain5");
     }
 
     // Update is called once per frame
