@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class LabelSwap : MonoBehaviour
 {
-    public bool isInteractable = true;
+    public bool isInteractable;
+
+    // leadIncomplete checks whether any leads have been completed
+    public bool leadIncomple = true;
     public GameObject Labels;
     public GameObject SwappedLabels;
+    public GameObject interactedObj;
     
     // Start is called before the first frame update
     void Start()
@@ -17,11 +21,26 @@ public class LabelSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable) 
+        if (Input.GetButtonDown("Interact") && isInteractable && leadIncomple) 
         {
             Labels.SetActive(false);
             SwappedLabels.SetActive(true);
-            isInteractable = false;
+            leadIncomple = false;
         }    
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Object"))
+        {
+            interactedObj = other.gameObject;
+            isInteractable = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        interactedObj = null;
+        isInteractable = false;
     }
 }
