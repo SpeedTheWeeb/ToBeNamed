@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 public class PlayerInteract : MonoBehaviour
 {
     public GameObject scriptobj;
@@ -15,7 +17,7 @@ public class PlayerInteract : MonoBehaviour
     public bool interact = false;
     public bool isHolding = false;
     bool isNight;
-    GameObject holdingObj;
+    public GameObject holdingObj;
     string sc = "";
     // Start is called before the first frame update
     void Start()
@@ -32,9 +34,10 @@ public class PlayerInteract : MonoBehaviour
         {
             if (_object.name != "SwitchCube" && isNight)
             {
+                RuntimeManager.PlayOneShot("event:/sfx/oneshot/pickup");
                 holdingObj = _object;
                 holdingObj.transform.parent = transform;
-                holdingObj.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+                holdingObj.transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);
                 interactText.gameObject.SetActive(false);
                 isHolding = true;
             }

@@ -8,11 +8,12 @@ public class CutRope : MonoBehaviour
     GameObject interactedObj;
     public GameObject sChanger;
     SceneChanger changer;
-    FMODOneShots fmodSFX; //untested
+    FMODOneShots fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
+        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
 
@@ -25,13 +26,18 @@ public class CutRope : MonoBehaviour
             switch(interactedObj.name)
             {
                 case "Knife":
-                    changer.getResult = 1;
-                    //fmodSFX.SFXOneShots(); //untested
+                    changer.getDay1Result = 1;
+                    fmodSFX.SFXOneShots("rope_cut");
+                    break;
+                case "Candle": //NYI
+                    changer.getDay1Result = 1;
+                    fmodSFX.SFXOneShots("rope_burn");
                     break;
                 case "Potion":
-                    changer.getResult = 2;
+                    changer.getDay1Result = 2;
                     break;
             }
+            interactedObj.SetActive(false);
             gameObject.SetActive(false);
         }
     }
