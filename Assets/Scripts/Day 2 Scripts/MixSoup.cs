@@ -7,16 +7,13 @@ public class MixSoup : MonoBehaviour
     public bool isInteractable;
     public GameObject interactedObj;
     public GameObject Effect;
-    GameObject player;
-    PlayerInteract pi;
     FMODOneShots fmodSFX;
-
+    public GameObject LightVFX;
 
     // Start is called before the first frame update
     void Start()
     {
         fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
-        player = GameObject.Find("Captain5");
     }
 
     // Update is called once per frame
@@ -30,6 +27,7 @@ public class MixSoup : MonoBehaviour
                 case "Antidote":
                     Effect.gameObject.SetActive(false);
                     fmodSFX.SFXOneShots("pot_bubble");
+                    LightVFX.gameObject.SetActive(true);
                     break;
                 case "Potion":
                     break;
