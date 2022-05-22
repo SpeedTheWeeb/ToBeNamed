@@ -7,7 +7,8 @@ public class SceneChanger : MonoBehaviour
     public GameObject[] gameObjects;
     Scene currentScene;
     public GameObject robe;
-    public int getResult = 0;
+    public int getDay1Result = 0;
+    public int getDay2AResult = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,17 +31,32 @@ public class SceneChanger : MonoBehaviour
         switch (currentScene.name)
         {
             case "Day 1":
-                
-                if(getResult != 0)
+                if(getDay1Result != 0)
                 {
+                    //Reaction on Cut Rope
                     SceneManager.LoadScene("Day 2A");
                 }
-                else if(getResult == 0)
+                else if(getDay1Result == 0)
                 {
+                    //Reaction on no cut rope
                     SceneManager.LoadScene("Day 2B");
                 }
                 break;
             case "Day 2A":
+                switch(getDay2AResult)
+                {
+                    case 1:
+                        //Reaction on healed soup
+                        break;
+                    case 2:
+                        //Reaction on Swapped Soup
+                        break;
+                    case 3:
+                        //Reaction on both soups poisoned
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case "Day 2B":
                 break;

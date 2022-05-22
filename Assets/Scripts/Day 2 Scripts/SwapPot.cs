@@ -9,10 +9,12 @@ public class SwapPot : MonoBehaviour
     public GameObject pos2;
     GameObject pot;
     public GameObject mainPot;
+    public GameObject sChanger;
+    SceneChanger changer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        changer = sChanger.GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class SwapPot : MonoBehaviour
         {
             pot.transform.position = pos2.transform.position;
             mainPot.transform.position = pos1.transform.position;
+            changer.getDay2AResult = 2;
             Destroy(pot.GetComponent<Collider>());
         }
     }

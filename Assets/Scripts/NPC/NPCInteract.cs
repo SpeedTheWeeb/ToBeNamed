@@ -29,11 +29,11 @@ public class NPCInteract : MonoBehaviour
     {
         if(sceneChecker == "d1React")
         {
-            if(changer.getResult == 1)
+            if(changer.getDay1Result == 1)
             {
                 sceneChecker = "D2Aplan.sabo";
             }
-            else if(changer.getResult == 2)
+            else if(changer.getDay1Result == 2)
             {
                 sceneChecker = "D2Aplan.rats";
             }

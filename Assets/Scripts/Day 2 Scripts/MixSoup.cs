@@ -9,11 +9,13 @@ public class MixSoup : MonoBehaviour
     public GameObject Effect;
     FMODOneShots fmodSFX;
     public GameObject LightVFX;
-
+    public GameObject sChanger;
+    SceneChanger changer;
     // Start is called before the first frame update
     void Start()
     {
         fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
+        changer = sChanger.GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -21,23 +23,16 @@ public class MixSoup : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && isInteractable)
         {
-            Debug.Log(interactedObj.name);
-            switch (interactedObj.name)
-            {
-                case "Antidote":
-                    Effect.gameObject.SetActive(false);
-                    fmodSFX.SFXOneShots("pot_bubble");
-                    LightVFX.gameObject.SetActive(true);
-                    break;
-                case "Potion":
-                    break;
-            }
-            
+            Effect.gameObject.SetActive(false);
+            fmodSFX.SFXOneShots("pot_bubble");
+            LightVFX.gameObject.SetActive(true);
+            interactedObj.SetActive(false);
+            changer.getDay2AResult = 1;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Object"))
+        if (other.name == "Antidote")
         {
             interactedObj = other.gameObject;
             isInteractable = true;

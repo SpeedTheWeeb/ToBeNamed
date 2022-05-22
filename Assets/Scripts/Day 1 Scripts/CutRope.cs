@@ -26,17 +26,18 @@ public class CutRope : MonoBehaviour
             switch(interactedObj.name)
             {
                 case "Knife":
-                    changer.getResult = 1;
+                    changer.getDay1Result = 1;
                     fmodSFX.SFXOneShots("rope_cut");
                     break;
                 case "Candle": //NYI
-                    changer.getResult = 1;
+                    changer.getDay1Result = 1;
                     fmodSFX.SFXOneShots("rope_burn");
                     break;
                 case "Potion":
-                    changer.getResult = 2;
+                    changer.getDay1Result = 2;
                     break;
             }
+            interactedObj.SetActive(false);
             gameObject.SetActive(false);
         }
     }
