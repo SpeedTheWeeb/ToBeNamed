@@ -10,6 +10,7 @@ public class SceneChanger : MonoBehaviour
     public int getDay1Result = 0;
     public int getDay2AResult = 0;
     public int getDay2BResult = 0;
+    public string reactionResult = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -46,29 +47,42 @@ public class SceneChanger : MonoBehaviour
             case "Day 2A":
                 switch(getDay2AResult)
                 {
+                    case 0:
+                        //Reaction on Poison play
+                        reactionResult = "poisenSuccess";
+                        break;
                     case 1:
                         //Reaction on healed soup
+                        reactionResult = "healSoup";
                         break;
                     case 2:
                         //Reaction on Swapped Soup
+                        reactionResult = "swapSoup";
                         break;
                     case 3:
                         //Reaction on both soups poisoned
-                        break;
-                    default:
+                        reactionResult = "bothPoison";
                         break;
                 }
+                SceneManager.LoadScene("Day 3");
                 break;
             case "Day 2B":
                 switch(getDay2BResult)
                 {
+                    case 0:
+                        //Reaction on dumped resource
+                        reactionResult = "foodDumped";
+                        break;
                     case 1:
                         //Reaction on swapped labels
+                        reactionResult = "swapLabel";
                         break;
                     case 2:
                         //Reaction on trawl net
+                        reactionResult = "trawlNet";
                         break;
                 }
+                SceneManager.LoadScene("Day 3");
                 break;
         }
     }

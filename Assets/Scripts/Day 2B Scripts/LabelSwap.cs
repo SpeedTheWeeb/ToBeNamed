@@ -18,6 +18,7 @@ public class LabelSwap : MonoBehaviour
     void Start()
     {
         sChanger = GameObject.Find("ScriptObj");
+        changer = sChanger.GetComponent<SceneChanger>();
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
