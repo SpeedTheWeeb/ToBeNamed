@@ -12,10 +12,12 @@ public class LabelSwap : MonoBehaviour
     public GameObject SwappedLabels;
     public GameObject interactedObj;
     AudioManager fmodSFX;
-
+    public GameObject sChanger;
+    SceneChanger changer;
     // Start is called before the first frame update
     void Start()
     {
+        sChanger = GameObject.Find("ScriptObj");
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
@@ -27,6 +29,7 @@ public class LabelSwap : MonoBehaviour
             //fmodSFX.SFXOneShots("label");
             Labels.SetActive(false);
             SwappedLabels.SetActive(true);
+            changer.getDay2BResult = 1;
         }    
     }
 
