@@ -26,7 +26,7 @@ public class LabelSwap : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && isInteractable) 
         {
-            //fmodSFX.SFXOneShots("label");
+            fmodSFX.SFXOneShots("label");
             Labels.SetActive(false);
             SwappedLabels.SetActive(true);
             changer.getDay2BResult = 1;
