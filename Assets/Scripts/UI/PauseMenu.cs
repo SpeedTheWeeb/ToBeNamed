@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject tutText;
+    public GameObject tutMenuUI;
 
     void Update() 
     {
@@ -17,6 +20,17 @@ public class PauseMenu : MonoBehaviour
             } else 
             {
                 Pause();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "testScene") 
+        {
+            if (Input.GetKey(KeyCode.Q)) 
+            {
+                tutMenuUI.SetActive(true);    
+                tutText.SetActive(false);
+            } else {
+                tutMenuUI.SetActive(false);
             }
         }
     }
