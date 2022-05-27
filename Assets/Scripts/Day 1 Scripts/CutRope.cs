@@ -8,12 +8,12 @@ public class CutRope : MonoBehaviour
     GameObject interactedObj;
     public GameObject sChanger;
     SceneChanger changer;
-    FMODOneShots fmodSFX;
+    AudioManager fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
-        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
+        fmodSFX = GameObject.FindObjectOfType<AudioManager>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
 

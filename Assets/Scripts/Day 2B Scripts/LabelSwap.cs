@@ -11,12 +11,12 @@ public class LabelSwap : MonoBehaviour
     public GameObject Labels;
     public GameObject SwappedLabels;
     public GameObject interactedObj;
-    FMODOneShots fmodSFX;
+    AudioManager fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
-        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
+        fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
