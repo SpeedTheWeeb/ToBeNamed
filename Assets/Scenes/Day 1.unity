@@ -64467,7 +64467,7 @@ GameObject:
   - component: {fileID: 1970036083}
   - component: {fileID: 1970036082}
   m_Layer: 0
-  m_Name: SwitchCube (day/night)
+  m_Name: SwitchCube
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
