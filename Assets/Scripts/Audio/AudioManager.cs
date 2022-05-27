@@ -8,30 +8,45 @@ using FMODUnity;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    public Scene scene;
+
     public EventInstance mainBGM;
     public EventInstance creakSFX;
     public EventInstance waveSFX;
     public EventInstance windSFX;
+
     public float deck;
     public float night;
     public float day2;
-    public PLAYBACK_STATE pbsBGM;
-    public Scene scene;
+
+    [HideInInspector] public PLAYBACK_STATE pbsBGM;
+    [HideInInspector] public PLAYBACK_STATE pbsCreak;
+    [HideInInspector] public PLAYBACK_STATE pbsWave;
+    [HideInInspector] public PLAYBACK_STATE pbsWind;
 
     private void Awake()
     {
         ManageSingleton();
         scene = SceneManager.GetActiveScene();
-        mainBGM = RuntimeManager.CreateInstance("event:/bgm/main");
+        /*mainBGM = RuntimeManager.CreateInstance("event:/bgm/main");
         creakSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/creak");
         waveSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/waves");
         windSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/wind");
+
+        mainBGM.getPlaybackState(out pbsBGM);
+        creakSFX.getPlaybackState(out pbsCreak);
+        waveSFX.getPlaybackState(out pbsWave);
+        windSFX.getPlaybackState(out pbsWind);
+
         deck = 1f;
         night = 0f;
         day2 = 0f;
+
         mainBGM.setParameterByName("deck", deck);
         mainBGM.setParameterByName("night", night);
         mainBGM.setParameterByName("day2", day2);
+        waveSFX.setParameterByName("deck", deck);
+        windSFX.setParameterByName("deck", deck);*/
     }
 
     void ManageSingleton()
@@ -50,12 +65,26 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        FMODStartBGM();
+        
     }
-
+   
     public void FMODStartBGM()
     {
-        
+        mainBGM = RuntimeManager.CreateInstance("event:/bgm/main");
+        creakSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/creak");
+        waveSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/waves");
+        windSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/wind");        
+
+        deck = 1f;
+        night = 0f;
+        day2 = 0f;
+
+        mainBGM.setParameterByName("deck", deck);
+        mainBGM.setParameterByName("night", night);
+        mainBGM.setParameterByName("day2", day2);
+        waveSFX.setParameterByName("deck", deck);
+        windSFX.setParameterByName("deck", deck);
+
         mainBGM.start();
         creakSFX.start();
         waveSFX.start();
