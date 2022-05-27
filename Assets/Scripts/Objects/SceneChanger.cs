@@ -6,6 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     public GameObject[] gameObjects;
     Scene currentScene;
+    public string scenename;
     public GameObject robe;
     public int getDay1Result = 0;
     public int getDay2AResult = 0;
@@ -15,6 +16,7 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
+        scenename = currentScene.name;
     }
 
     // Update is called once per frame
@@ -25,6 +27,8 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene()
     {
+        currentScene = SceneManager.GetActiveScene();
+        scenename = currentScene.name;
         foreach(var obj in gameObjects)
         {
             DontDestroyOnLoad(obj);
