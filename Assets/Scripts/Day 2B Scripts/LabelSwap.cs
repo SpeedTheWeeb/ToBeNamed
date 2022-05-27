@@ -7,7 +7,7 @@ public class LabelSwap : MonoBehaviour
     public bool isInteractable;
 
     // leadIncomplete checks whether any leads have been completed
-    public bool leadIncomple = true;
+
     public GameObject Labels;
     public GameObject SwappedLabels;
     public GameObject interactedObj;
@@ -22,18 +22,17 @@ public class LabelSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable && leadIncomple) 
+        if (Input.GetButtonDown("Interact") && isInteractable) 
         {
-            fmodSFX.SFXOneShots("label");
+            //fmodSFX.SFXOneShots("label");
             Labels.SetActive(false);
             SwappedLabels.SetActive(true);
-            leadIncomple = false;
         }    
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Object"))
+        if(other.CompareTag("Player"))
         {
             interactedObj = other.gameObject;
             isInteractable = true;
