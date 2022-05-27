@@ -14080,6 +14080,7 @@ MonoBehaviour:
   - {fileID: 412727707}
   - {fileID: 1980632878}
   - {fileID: 352503821}
+  scenename: 
   robe: {fileID: 982715045}
   getDay1Result: 0
   getDay2AResult: 0
@@ -52964,7 +52965,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352460178}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
@@ -85074,7 +85075,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119486256}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
