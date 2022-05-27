@@ -48630,7 +48630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 0
-  leadIncomple: 1
   Labels: {fileID: 1110860784}
   SwappedLabels: {fileID: 1981163619}
   interactedObj: {fileID: 1503307980}
@@ -64178,7 +64177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981163619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -669.19995, y: 299.99988, z: -4.6639667}
+  m_LocalPosition: {x: -669.19995, y: 299.33, z: -4.6639667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 630244394}
