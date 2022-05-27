@@ -11,16 +11,12 @@ public class LabelSwap : MonoBehaviour
     public GameObject Labels;
     public GameObject SwappedLabels;
     public GameObject interactedObj;
-    public GameObject sChanger;
-    SceneChanger changer;
-    FMODOneShots fmodSFX;
+    AudioManager fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
-        sChanger = GameObject.Find("ScriptObj");
-        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
-        changer = sChanger.GetComponent<SceneChanger>();
+        fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -28,8 +24,6 @@ public class LabelSwap : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && isInteractable) 
         {
-            changer.getDay2BResult = 1;
-            Destroy(gameObject.GetComponent<Collider>());
             //fmodSFX.SFXOneShots("label");
             Labels.SetActive(false);
             SwappedLabels.SetActive(true);

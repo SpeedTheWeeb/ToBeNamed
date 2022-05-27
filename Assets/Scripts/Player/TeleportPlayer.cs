@@ -8,13 +8,13 @@ public class TeleportPlayer : MonoBehaviour
 {
     public GameObject tpPoint;
     public GameObject Player;
-    FMODOneShots fmodSFX;
+    AudioManager fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
+        fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
