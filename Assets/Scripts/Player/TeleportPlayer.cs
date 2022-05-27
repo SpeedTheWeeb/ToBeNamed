@@ -8,11 +8,13 @@ public class TeleportPlayer : MonoBehaviour
 {
     public GameObject tpPoint;
     public GameObject Player;
+    FMODOneShots fmodSFX;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class TeleportPlayer : MonoBehaviour
         if(other.name == "TPObj")
         {
             Debug.Log(tpPoint.transform.position);
-            RuntimeManager.PlayOneShot("event:/sfx/oneshot/open_door");
+            fmodSFX.SFXOneShots("open_door");
             Player.transform.position = tpPoint.transform.position;
             if(tpPoint.name == "UnderUpperTP" || tpPoint.name == "UpperTP")
                 FindObjectOfType<AudioManager>().FMODToggleDeck();
