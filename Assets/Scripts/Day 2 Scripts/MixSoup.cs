@@ -14,6 +14,7 @@ public class MixSoup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sChanger = GameObject.Find("ScriptObj");
         fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
