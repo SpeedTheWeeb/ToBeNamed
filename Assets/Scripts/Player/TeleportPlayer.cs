@@ -13,7 +13,7 @@ public class TeleportPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        //Player = GameObject.FindGameObjectWithTag("Player");
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
@@ -23,10 +23,11 @@ public class TeleportPlayer : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "TPObj")
+        if (other.name == "TPObj")
         {
             Debug.Log(tpPoint.transform.position);
             fmodSFX.SFXOneShots("open_door");
+            Player = other.transform.parent.gameObject;
             Player.transform.position = tpPoint.transform.position;
             if(tpPoint.name == "UnderUpperTP" || tpPoint.name == "UpperTP")
                 FindObjectOfType<AudioManager>().FMODToggleDeck();
