@@ -7,14 +7,15 @@ public class MixSoup : MonoBehaviour
     public bool isInteractable;
     public GameObject interactedObj;
     public GameObject Effect;
-    FMODOneShots fmodSFX;
+    AudioManager fmodSFX;
     public GameObject LightVFX;
     public GameObject sChanger;
     SceneChanger changer;
     // Start is called before the first frame update
     void Start()
     {
-        fmodSFX = GameObject.Find("AudioManager").GetComponent<FMODOneShots>();
+        sChanger = GameObject.Find("ScriptObj");
+        fmodSFX = GameObject.FindObjectOfType<AudioManager>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
 

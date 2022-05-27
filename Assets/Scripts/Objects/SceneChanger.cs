@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     public GameObject robe;
     public int getDay1Result = 0;
     public int getDay2AResult = 0;
+    public int getDay2BResult = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,15 @@ public class SceneChanger : MonoBehaviour
                 }
                 break;
             case "Day 2B":
+                switch(getDay2BResult)
+                {
+                    case 1:
+                        //Reaction on swapped labels
+                        break;
+                    case 2:
+                        //Reaction on trawl net
+                        break;
+                }
                 break;
         }
     }

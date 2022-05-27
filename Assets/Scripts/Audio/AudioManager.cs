@@ -91,4 +91,19 @@ public class AudioManager : MonoBehaviour
             day2 = 1f;
         mainBGM.setParameterByName("day2", day2);
     }
+
+    public void SFXOneShots(string eventName)
+    {
+        RuntimeManager.PlayOneShot("event:/sfx/oneshot/" + eventName);
+        /*
+         * label
+         * open_door
+         * pickup
+         * pot_bubble
+         * rats
+         * rope_burn
+         * rope_cut
+         * unlock
+         */
+    }
 }

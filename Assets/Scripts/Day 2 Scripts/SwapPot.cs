@@ -14,6 +14,7 @@ public class SwapPot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sChanger = GameObject.Find("ScriptObj");
         changer = sChanger.GetComponent<SceneChanger>();
     }
 

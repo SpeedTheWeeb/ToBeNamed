@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{49ae5f4a-aa40-4dc1-a80b-ff299e20ddf9}">
+		<property name="assetPath">
+			<value>snap3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.5717187499999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{97d8c913-8655-4479-ba3e-c064d00e4bd7}</destination>
+		</relationship>
+	</object>
+</objects>
