@@ -25,7 +25,7 @@ public class CutRope : MonoBehaviour
             Debug.Log(interactedObj.name);
             switch(interactedObj.name)
             {
-                case "Knife":
+                case "Cutlass":
                     changer.getDay1Result = 1;
                     fmodSFX.SFXOneShots("rope_cut");
                     break;
@@ -33,7 +33,7 @@ public class CutRope : MonoBehaviour
                     changer.getDay1Result = 1;
                     fmodSFX.SFXOneShots("rope_burn");
                     break;
-                case "Potion":
+                case "Sauce":
                     changer.getDay1Result = 2;
                     break;
             }
