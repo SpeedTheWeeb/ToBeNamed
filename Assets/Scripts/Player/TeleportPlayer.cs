@@ -29,7 +29,7 @@ public class TeleportPlayer : MonoBehaviour
             fmodSFX.SFXOneShots("open_door");
             Player = other.transform.parent.gameObject;
             Player.transform.position = tpPoint.transform.position;
-            if(tpPoint.name == "UnderUpperTP" || tpPoint.name == "UpperTP")
+            if(tpPoint.name == "UnderUpperTP" || tpPoint.name == "UpperTP" || tpPoint.name == "CabinDeckTP" || tpPoint.name == "DeckCabinTP")
                 FindObjectOfType<AudioManager>().FMODToggleDeck();
         }
     }
