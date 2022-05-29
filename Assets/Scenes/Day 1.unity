@@ -51037,7 +51037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180047907}
   m_Layer: 0
-  m_Name: FloatinanchorBody
+  m_Name: FloatinanchorBody(Ropekandidat)
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
