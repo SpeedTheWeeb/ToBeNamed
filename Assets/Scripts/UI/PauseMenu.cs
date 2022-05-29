@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (SceneManager.GetActiveScene().name == "testScene") 
+        if (SceneManager.GetActiveScene().name == "Day 1") 
         {
             if (Input.GetKey(KeyCode.Q)) 
             {
