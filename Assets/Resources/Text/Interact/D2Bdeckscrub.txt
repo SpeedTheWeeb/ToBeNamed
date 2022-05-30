@@ -1,2 +1,2 @@
-Pirate 1:Mate, could you help me with the trawler net? Last time I bungled it up and spent 5 hours untangling it in the Hold. Ain't too keen on doing that again.
-Pirate 2:Aye, could do that wit ye. You'll owe me though. Let's finish this up quick, then.
+Pirate1:Mate, could you help me with the trawler net? Last time I bungled it up and spent 5 hours untangling it in the Hold. Ain't too keen on doing that again.
+Pirate4:Aye, could do that wit ye. You'll owe me though. Let's finish this up quick, then.
