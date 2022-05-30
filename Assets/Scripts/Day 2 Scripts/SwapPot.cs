@@ -11,17 +11,19 @@ public class SwapPot : MonoBehaviour
     public GameObject mainPot;
     public GameObject sChanger;
     SceneChanger changer;
+    TimeChanger time;
     // Start is called before the first frame update
     void Start()
     {
         sChanger = GameObject.Find("ScriptObj");
         changer = sChanger.GetComponent<SceneChanger>();
+        time = sChanger.GetComponent<TimeChanger>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable)
+        if (Input.GetButtonDown("Interact") && isInteractable && time.isNight)
         {
             pot.transform.position = pos2.transform.position;
             mainPot.transform.position = pos1.transform.position;

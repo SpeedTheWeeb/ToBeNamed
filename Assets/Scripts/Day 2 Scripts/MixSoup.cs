@@ -11,18 +11,20 @@ public class MixSoup : MonoBehaviour
     public GameObject LightVFX;
     public GameObject sChanger;
     SceneChanger changer;
+    TimeChanger time;
     // Start is called before the first frame update
     void Start()
     {
         sChanger = GameObject.Find("ScriptObj");
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
+        time = sChanger.GetComponent<TimeChanger>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable)
+        if (Input.GetButtonDown("Interact") && isInteractable && time.isNight)
         {
             Effect.gameObject.SetActive(false);
             fmodSFX.SFXOneShots("pot_bubble");

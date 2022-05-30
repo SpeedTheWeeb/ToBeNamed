@@ -10,17 +10,19 @@ public class DoublePoison : MonoBehaviour
     GameObject poison;
     public GameObject sChanger;
     SceneChanger changer;
+    TimeChanger time;
     // Start is called before the first frame update
     void Start()
     {
         sChanger = GameObject.Find("ScriptObj");
+        time = sChanger.GetComponent<TimeChanger>();
         changer = sChanger.GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable)
+        if (Input.GetButtonDown("Interact") && isInteractable && time.isNight)
         {
             Light.SetActive(false);
             PoisonTrail.SetActive(true);

@@ -14,18 +14,20 @@ public class LabelSwap : MonoBehaviour
     AudioManager fmodSFX;
     public GameObject sChanger;
     SceneChanger changer;
+    TimeChanger time;
     // Start is called before the first frame update
     void Start()
     {
         sChanger = GameObject.Find("ScriptObj");
         changer = sChanger.GetComponent<SceneChanger>();
+        time = sChanger.GetComponent<TimeChanger>();
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && isInteractable) 
+        if (Input.GetButtonDown("Interact") && isInteractable && time.isNight) 
         {
             fmodSFX.SFXOneShots("label");
             Labels.SetActive(false);

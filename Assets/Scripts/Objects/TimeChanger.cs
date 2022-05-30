@@ -12,13 +12,18 @@ public class TimeChanger : MonoBehaviour
     SceneChanger changer;
     public GameObject sleepingCrew;
     GameObject Crew;
+    GameObject[] nightObjs;
     public Color nightColor = new Color(34f / 255f, 31f / 255f, 185f / 255f);
     public Color dayColor = new Color(255 / 255f, 255 / 255f, 255 / 255f);
     // Start is called before the first frame update
     void Start()
     {
-        
+        nightObjs = GameObject.FindGameObjectsWithTag("Night");
         changer = gameObject.GetComponent<SceneChanger>();
+        foreach(GameObject g in nightObjs)
+        {
+            g.SetActive(false);
+        }
     }
 
     public void changeTime()
@@ -28,6 +33,10 @@ public class TimeChanger : MonoBehaviour
         DontDestroyOnLoad(_light);
         if(!isNight)
         {
+            foreach (GameObject g in nightObjs)
+            {
+                g.SetActive(true);
+            }
             foreach(GameObject light in Lights)
             {
                 Light l = light.GetComponent<Light>();
@@ -35,7 +44,7 @@ public class TimeChanger : MonoBehaviour
             }
             Crew = GameObject.Find("Crew");
             Debug.Log("Is Night");
-            _light.color = new Color(1,1,1);
+            _light.color = new Color(0,0,0);
             foreach (GameObject allPirate in pirates)
             {
                 allPirate.SetActive(false);
@@ -46,6 +55,8 @@ public class TimeChanger : MonoBehaviour
         }
         else
         {
+            //Day Time
+
             //Don't uncomment yet
             sleepingCrew.SetActive(false);
             changer.ChangeScene();
