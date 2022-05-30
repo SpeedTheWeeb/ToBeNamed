@@ -53,7 +53,7 @@ public class SceneChanger : MonoBehaviour
                 {
                     case 0:
                         //Reaction on Poison play
-                        reactionResult = "poisenSuccess";
+                        reactionResult = "poisonSuccess";
                         break;
                     case 1:
                         //Reaction on healed soup

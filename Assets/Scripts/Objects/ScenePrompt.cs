@@ -24,12 +24,14 @@ public class ScenePrompt : MonoBehaviour
     }
     void YesClick()
     {
+        Debug.Log("Yes");
         promtCanvas.SetActive(false);
         time.changeTime();
         Time.timeScale = 1;
     }
     void NoClick()
     {
+        Debug.Log("No");
         promtCanvas.SetActive(false);
         Time.timeScale = 1;
     }
