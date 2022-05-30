@@ -21303,6 +21303,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8916559568196922173, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
   m_PrefabInstance: {fileID: 413440488}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &414068226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414068227}
+  m_Layer: 0
+  m_Name: CandleParent
+  m_TagString: Night
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414068227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414068226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 316.72995, y: 11.940001, z: 25.27989}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children:
+  - {fileID: 581402033}
+  m_Father: {fileID: 2135565173}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417713844
 GameObject:
   m_ObjectHideFlags: 0
@@ -28225,7 +28256,7 @@ GameObject:
   - component: {fileID: 581402034}
   m_Layer: 0
   m_Name: Candle
-  m_TagString: Night
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28238,13 +28269,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581402032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 370.28003, y: 10.843972, z: 14.755976}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.710016, y: -0.21920566, z: -2.1047828}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1107205796}
   - {fileID: 1948482397}
-  m_Father: {fileID: 2135565173}
-  m_RootOrder: 2
+  m_Father: {fileID: 414068227}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &581402034
 SphereCollider:
@@ -28257,7 +28288,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &582832355
 PrefabInstance:
@@ -99150,7 +99181,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2457273537968821494, guid: fbac80f280a03844bbdc56acff09ba24, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2457273537968821494, guid: fbac80f280a03844bbdc56acff09ba24, type: 3}
       propertyPath: m_LocalScale.x
@@ -101294,8 +101325,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2119404859}
+  - {fileID: 414068227}
   - {fileID: 4201928726835581}
-  - {fileID: 581402033}
   - {fileID: 2099705605}
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -101994,7 +102025,7 @@ Transform:
   - {fileID: 4091303330723191}
   - {fileID: 4293134705739921}
   m_Father: {fileID: 2135565173}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4293134705739921
 Transform:
