@@ -35,7 +35,7 @@ public class TimeChanger : MonoBehaviour
             }
             Crew = GameObject.Find("Crew");
             Debug.Log("Is Night");
-            _light.color = nightColor;
+            _light.color = new Color(1,1,1);
             foreach (GameObject allPirate in pirates)
             {
                 allPirate.SetActive(false);
