@@ -18790,31 +18790,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 377182137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4414976913841474659}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 240745626}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &377182137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86831,19 +86807,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1872799267}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4414976913841474659}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1872799267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107113,17 +107077,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f599b2e4ba44074c9ac80cee09863b8, type: 3}
---- !u!114 &4414976913841474659 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4414976915201868869, guid: 3f599b2e4ba44074c9ac80cee09863b8, type: 3}
-  m_PrefabInstance: {fileID: 4414976913841474658}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94ab62feb1784dc4a8ce7005030a51e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4418473096846977165
 Transform:
   m_ObjectHideFlags: 0
