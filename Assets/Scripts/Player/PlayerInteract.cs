@@ -37,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
         {        
             scene = SceneManager.GetActiveScene();
             day = scene.name;
-            if (_object.name != "SwitchCube" && isNight && _object.name != "LabelSwap")
+            if (_object.name != "SwitchCube" && isNight && _object.name != "LabelSwap" && _object.name != "Armory door (flipable)")
             {
                 RuntimeManager.PlayOneShot("event:/sfx/oneshot/pickup");
                 holdingObj = _object;
@@ -81,7 +81,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Object") || other.name == "LabelSwap")
+        if(other.CompareTag("Object") || other.name == "LabelSwap" || other.name == "Armory door (flipable)")
         {
             interactText.gameObject.SetActive(true);
             interact = true;
@@ -92,7 +92,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Object") || other.name == "LabelSwap")
+        if(other.CompareTag("Object") || other.name == "LabelSwap" || other.name == "Armory door (flipable)")
         {
             interactText.text = "Interact";
             interactText.gameObject.SetActive(false);
