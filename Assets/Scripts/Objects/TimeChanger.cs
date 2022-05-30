@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class TimeChanger : MonoBehaviour
 {
     public bool isNight;
@@ -12,6 +14,7 @@ public class TimeChanger : MonoBehaviour
     SceneChanger changer;
     public GameObject sleepingCrew;
     GameObject Crew;
+    Scene scene;
     GameObject[] nightObjs;
     public Color nightColor = new Color(34f / 255f, 31f / 255f, 185f / 255f);
     public Color dayColor = new Color(255 / 255f, 255 / 255f, 255 / 255f);
@@ -20,7 +23,8 @@ public class TimeChanger : MonoBehaviour
     {
         nightObjs = GameObject.FindGameObjectsWithTag("Night");
         changer = gameObject.GetComponent<SceneChanger>();
-        foreach(GameObject g in nightObjs)
+        scene = SceneManager.GetActiveScene();
+        foreach (GameObject g in nightObjs)
         {
             g.SetActive(false);
         }
@@ -33,10 +37,14 @@ public class TimeChanger : MonoBehaviour
         DontDestroyOnLoad(_light);
         if(!isNight)
         {
-            foreach (GameObject g in nightObjs)
+            if(scene.name == "Day 1")
             {
-                g.SetActive(true);
+                foreach (GameObject g in nightObjs)
+                {
+                    g.SetActive(true);
+                }
             }
+
             foreach(GameObject light in Lights)
             {
                 Light l = light.GetComponent<Light>();

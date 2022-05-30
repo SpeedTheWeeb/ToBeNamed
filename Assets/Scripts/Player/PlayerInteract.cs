@@ -5,11 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.SceneManagement;
 public class PlayerInteract : MonoBehaviour
 {
     public GameObject scriptobj;
     TimeChanger time;
     public string day;
+    Scene scene;
     public static readonly string Folder = "Text/Player/";
     public GameObject objSpawnPoint;
     public TextMeshProUGUI interactText;
@@ -28,11 +30,14 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         isNight = time.isNight;
         //Pick up nearby object
         if(Input.GetButtonDown("Interact") && interact && _object != null && !isHolding && holdingObj == null)
-        {
-            if (_object.name != "SwitchCube" && isNight)
+        {        
+            scene = SceneManager.GetActiveScene();
+            day = scene.name;
+            if (_object.name != "SwitchCube" && isNight && _object.name != "LabelSwap")
             {
                 RuntimeManager.PlayOneShot("event:/sfx/oneshot/pickup");
                 holdingObj = _object;
@@ -76,7 +81,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Object"))
+        if(other.CompareTag("Object") || other.name == "LabelSwap")
         {
             interactText.gameObject.SetActive(true);
             interact = true;
@@ -87,7 +92,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Object"))
+        if(other.CompareTag("Object") || other.name == "LabelSwap")
         {
             interactText.text = "Interact";
             interactText.gameObject.SetActive(false);
