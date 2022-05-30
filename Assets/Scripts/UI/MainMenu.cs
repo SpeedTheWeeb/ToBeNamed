@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
         bgmLoop = RuntimeManager.CreateInstance("event:/bgm/menu");
         bgmLoop.start();
         bgmLoop.getPlaybackState(out playbackState);
+        DestroyAll();
     }
 
     public void PlayGame () 
@@ -32,5 +33,17 @@ public class MainMenu : MonoBehaviour
         if (playbackState != PLAYBACK_STATE.STOPPED)
             bgmLoop.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         Application.Quit();
+    }
+
+    public void DestroyAll() 
+    {
+        Destroy(GameObject.Find("Captain5"));
+        Destroy(GameObject.Find("Main Camera"));
+        Destroy(GameObject.Find("Canvas"));
+        Destroy(GameObject.Find("ScriptObj"));
+        Destroy(GameObject.Find("Text Canvas"));
+        Destroy(GameObject.Find("SleepingCrew"));
+        Destroy(GameObject.Find("Directional Light"));
+        Destroy(GameObject.Find("SwitchCube"));
     }   
 }
