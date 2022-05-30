@@ -9,6 +9,8 @@ public class TimeChanger : MonoBehaviour
     GameObject[] pirates;
     public Light _light;
     SceneChanger changer;
+    public GameObject sleepingCrew;
+    GameObject Crew;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class TimeChanger : MonoBehaviour
         DontDestroyOnLoad(_light);
         if(!isNight)
         {
-            
+            Crew = GameObject.Find("Crew");
             Debug.Log("Is Night");
             _light.color = new Color(34f / 255f, 31f / 255f, 185f / 255f);
             foreach (GameObject allPirate in pirates)
@@ -31,10 +33,12 @@ public class TimeChanger : MonoBehaviour
             }
             FindObjectOfType<AudioManager>().FMODToggleTOD();
             isNight = true;
+            sleepingCrew.SetActive(true);
         }
         else
         {
             //Don't uncomment yet
+            sleepingCrew.SetActive(false);
             changer.ChangeScene();
             Debug.Log("Is Day");
             _light.color = new Color(255 / 255f, 255/ 255f, 255 / 255f);

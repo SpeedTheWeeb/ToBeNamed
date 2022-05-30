@@ -9,7 +9,7 @@ public class CutRope : MonoBehaviour
     public GameObject sChanger;
     SceneChanger changer;
     AudioManager fmodSFX;
-
+    public GameObject anchor;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,7 @@ public class CutRope : MonoBehaviour
                     break;
             }
             interactedObj.SetActive(false);
-            gameObject.SetActive(false);
+            anchor.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)

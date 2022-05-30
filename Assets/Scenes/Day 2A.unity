@@ -6982,7 +6982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: Peek
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16066,7 +16066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: Witts
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27279,7 +27279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: Doc
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47499,7 +47499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: Chands
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
@@ -93232,7 +93232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: parror
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
@@ -98471,7 +98471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916559566372592975, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: auraText
-      value: Pirate
+      value: fguts
       objectReference: {fileID: 0}
     - target: {fileID: 8916559567964881210, guid: 8a6b9923f9657894883b5d4ca1f3f258, type: 3}
       propertyPath: m_LocalRotation.w
