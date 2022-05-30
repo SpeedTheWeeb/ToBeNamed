@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Aura
   - TP
+  - Light
   layers:
   - Default
   - TransparentFX

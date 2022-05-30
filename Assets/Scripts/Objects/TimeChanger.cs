@@ -7,6 +7,7 @@ public class TimeChanger : MonoBehaviour
 {
     public bool isNight;
     GameObject[] pirates;
+    GameObject[] Lights;
     public Light _light;
     SceneChanger changer;
     public GameObject sleepingCrew;
@@ -21,9 +22,15 @@ public class TimeChanger : MonoBehaviour
     public void changeTime()
     {
         pirates = GameObject.FindGameObjectsWithTag("NPC");
+        Lights = GameObject.FindGameObjectsWithTag("Light");
         DontDestroyOnLoad(_light);
         if(!isNight)
         {
+            foreach(GameObject light in Lights)
+            {
+                Light l = light.GetComponent<Light>();
+                l.color = Color.black;
+            }
             Crew = GameObject.Find("Crew");
             Debug.Log("Is Night");
             _light.color = new Color(34f / 255f, 31f / 255f, 185f / 255f);
