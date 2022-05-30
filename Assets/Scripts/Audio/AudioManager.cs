@@ -83,7 +83,7 @@ public class AudioManager : MonoBehaviour
         waveSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/waves");
         windSFX = RuntimeManager.CreateInstance("event:/sfx/ambience/wind");        
 
-        deck = 1f;
+        deck = 0f;
         night = 0f;
         day2 = 0f;
 

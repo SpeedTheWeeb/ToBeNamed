@@ -1,3 +1,4 @@
-Knife:This is my old cutlass - we've seen many adventures together
-Potion:THE SAUCE!!!
+Armory door (flipable):I can see my old cutlass through the grate - we've seen many adventures together.
+Sauce:Fish-Gut's secret recipe, THE SAUCE!!!
 Candle:They found a candle... Good for them!
+Key:This key fits the grate to the armory downstairs.
