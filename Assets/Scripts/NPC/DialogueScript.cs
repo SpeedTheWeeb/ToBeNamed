@@ -17,7 +17,7 @@ public class DialogueScript : MonoBehaviour
     string[] line;
     public GameObject canvas;
     public TextMeshProUGUI diaText;
-
+    public TextMeshProUGUI nameText;
     //Check íf it's still the current character talking
     bool _line = false;
 
@@ -81,6 +81,7 @@ public class DialogueScript : MonoBehaviour
         {
             string[] nameSplitter = text[currentDia].Split(':');
             Texture io = Resources.Load(iFolder + nameSplitter[0]) as Texture;
+            nameText.text = nameSplitter[0];
             uiImg.texture = io;
             if (nameSplitter[1].Contains("_"))
             {
