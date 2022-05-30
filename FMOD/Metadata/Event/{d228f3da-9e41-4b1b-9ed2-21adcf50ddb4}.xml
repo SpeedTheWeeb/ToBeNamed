@@ -142,7 +142,7 @@
 	</object>
 	<object class="SingleSound" id="{0018e61e-435d-4f56-a4de-5ab80e6274d3}">
 		<property name="start">
-			<value>2.2000000000000002</value>
+			<value>1.8</value>
 		</property>
 		<property name="length">
 			<value>0.90000000000000036</value>
@@ -173,7 +173,7 @@
 	</object>
 	<object class="SingleSound" id="{582e7b59-ddc9-4a54-90c0-702799f681c0}">
 		<property name="start">
-			<value>2.2000000000000002</value>
+			<value>1.8</value>
 		</property>
 		<property name="length">
 			<value>0.90000000000000036</value>
@@ -207,7 +207,7 @@
 	</object>
 	<object class="SingleSound" id="{55baf782-bf94-4013-980b-0b9161729fa8}">
 		<property name="start">
-			<value>1</value>
+			<value>0.80000000000000004</value>
 		</property>
 		<property name="length">
 			<value>1.2000000000000002</value>
@@ -220,6 +220,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cb2be6e1-115d-4ea4-8329-b70370cb0bd0}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Audio 4</value>
 		</property>
