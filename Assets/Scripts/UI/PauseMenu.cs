@@ -29,15 +29,12 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (SceneManager.GetActiveScene().name == "Day 1") 
+        if (Input.GetKey(KeyCode.Q)) 
         {
-            if (Input.GetKey(KeyCode.Q)) 
-            {
-                tutMenuUI.SetActive(true);    
-                tutText.SetActive(false);
-            } else {
-                tutMenuUI.SetActive(false);
-            }
+            tutMenuUI.SetActive(true);    
+            tutText.SetActive(false);
+        } else {
+            tutMenuUI.SetActive(false);
         }
     }
 
