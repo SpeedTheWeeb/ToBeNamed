@@ -135,4 +135,19 @@ public class AudioManager : MonoBehaviour
          * unlock
          */
     }
+
+    public void StopMusic()
+    {
+        mainBGM.getPlaybackState(out pbsBGM);
+        creakSFX.getPlaybackState(out pbsCreak);
+        waveSFX.getPlaybackState(out pbsWave);
+        windSFX.getPlaybackState(out pbsWind);
+        if (pbsBGM != PLAYBACK_STATE.STOPPED)
+        {
+            mainBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            creakSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            waveSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            windSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+    }
 }
