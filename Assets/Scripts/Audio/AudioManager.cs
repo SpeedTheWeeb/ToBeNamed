@@ -65,11 +65,12 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        scene = SceneManager.GetActiveScene();
         mainBGM.getPlaybackState(out pbsBGM);
         creakSFX.getPlaybackState(out pbsCreak);
         waveSFX.getPlaybackState(out pbsWave);
         windSFX.getPlaybackState(out pbsWind);
-        if (pbsBGM == PLAYBACK_STATE.STOPPED)
+        if (pbsBGM == PLAYBACK_STATE.STOPPED && scene.name != "mainMenu")
         {
             FMODStartBGM();
         }
