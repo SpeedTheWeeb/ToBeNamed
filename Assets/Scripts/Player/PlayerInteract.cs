@@ -10,6 +10,7 @@ public class PlayerInteract : MonoBehaviour
 {
     public GameObject scriptobj;
     TimeChanger time;
+    public GameObject promt;
     public string day;
     Scene scene;
     public static readonly string Folder = "Text/Player/";
@@ -63,7 +64,8 @@ public class PlayerInteract : MonoBehaviour
             }
             else if(_object.name == "SwitchCube")
             {
-                time.changeTime();
+                Time.timeScale = 0;
+                promt.SetActive(true);
             }
         }
         //Drop holding object
