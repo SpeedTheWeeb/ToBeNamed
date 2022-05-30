@@ -35,6 +35,7 @@ public class CutRope : MonoBehaviour
                     break;
                 case "Sauce":
                     changer.getDay1Result = 2;
+                    fmodSFX.SFXOneShots("rats");
                     break;
             }
             interactedObj.SetActive(false);
