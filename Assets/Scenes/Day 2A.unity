@@ -73055,10 +73055,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4414976914993447871, guid: 3f599b2e4ba44074c9ac80cee09863b8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4414976915201868868, guid: 3f599b2e4ba44074c9ac80cee09863b8, type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas

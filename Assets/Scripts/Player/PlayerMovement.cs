@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 direction = new Vector3(hInput, 0, vInput);
-        Vector3 movement = direction * speedMultiplier;
+        Vector3 movement = direction.normalized * speedMultiplier;
         movement.y = rb.velocity.y;
         rb.velocity = movement;
 

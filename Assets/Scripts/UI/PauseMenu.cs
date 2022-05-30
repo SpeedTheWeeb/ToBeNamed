@@ -9,6 +9,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject tutText;
     public GameObject tutMenuUI;
+    AudioManager audioManager;
+
+    void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     void Update() 
     {
@@ -51,6 +57,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit ()
     {
-        Application.Quit();
+        audioManager.StopMusic();
+        SceneManager.LoadScene("mainMenu");
     }
 }

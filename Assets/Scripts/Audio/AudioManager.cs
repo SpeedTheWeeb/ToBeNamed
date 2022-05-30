@@ -65,7 +65,14 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        
+        mainBGM.getPlaybackState(out pbsBGM);
+        creakSFX.getPlaybackState(out pbsCreak);
+        waveSFX.getPlaybackState(out pbsWave);
+        windSFX.getPlaybackState(out pbsWind);
+        if (pbsBGM == PLAYBACK_STATE.STOPPED)
+        {
+            FMODStartBGM();
+        }
     }
    
     public void FMODStartBGM()
