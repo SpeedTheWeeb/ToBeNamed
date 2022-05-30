@@ -22,23 +22,26 @@ public class CutRope : MonoBehaviour
     {
         if(Input.GetButtonDown("Interact") && isInteractable)
         {
-            Debug.Log(interactedObj.name);
-            switch(interactedObj.name)
+            if(interactedObj.name != "Key")
             {
-                case "Cutlass":
-                    changer.getDay1Result = 1;
-                    fmodSFX.SFXOneShots("rope_cut");
-                    break;
-                case "Candle": //NYI
-                    changer.getDay1Result = 1;
-                    fmodSFX.SFXOneShots("rope_burn");
-                    break;
-                case "Sauce":
-                    changer.getDay1Result = 2;
-                    break;
+                Debug.Log(interactedObj.name);
+                switch(interactedObj.name)
+                {
+                    case "Cutlass":
+                        changer.getDay1Result = 1;
+                        fmodSFX.SFXOneShots("rope_cut");
+                        break;
+                    case "Candle": //NYI
+                        changer.getDay1Result = 1;
+                        fmodSFX.SFXOneShots("rope_burn");
+                        break;
+                    case "Sauce":
+                        changer.getDay1Result = 2;
+                        break;
+                }
+                interactedObj.SetActive(false);
+                anchor.SetActive(false);
             }
-            interactedObj.SetActive(false);
-            anchor.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
