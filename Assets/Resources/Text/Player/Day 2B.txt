@@ -1,2 +1,2 @@
-Trawl:There is a trawl net in this barrel
-LabelSwap:Barrels for food and alchohol
+Trawl:Fish Gut's trawl net is neatly folded inside this barrel
+LabelSwap:Barrels for food and alchohol. I wouldn't be able to tell which is which if not for the labels...
