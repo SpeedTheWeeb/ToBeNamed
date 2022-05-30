@@ -4,12 +4,13 @@ using UnityEngine;
 using System;
 using System.IO;
 using UnityEngine.UI;
+using TMPro;
 public class Aura : MonoBehaviour
 {
     public static readonly string folder = "Text/Auras/";
     public string[] text;
     public string npc;
-    public Text hoverText;
+    public TextMeshPro hoverText;
     public string auraText;
     public bool inAura = false;
     // Start is called before the first frame update

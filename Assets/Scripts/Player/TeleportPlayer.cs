@@ -10,9 +10,11 @@ public class TeleportPlayer : MonoBehaviour
     public GameObject Player;
     AudioManager fmodSFX;
     public Light sunLight;
+    TimeChanger time;
     // Start is called before the first frame update
     void Start()
     {
+        time = GameObject.Find("ScriptObj").GetComponent<TimeChanger>();
         //Player = GameObject.FindGameObjectWithTag("Player");
         fmodSFX = GameObject.FindObjectOfType<AudioManager>();
     }
@@ -40,7 +42,15 @@ public class TeleportPlayer : MonoBehaviour
             }
             else if(tpPoint.name == "UpperTP" || tpPoint.name == "DeckCabinTP")
             {
-                sunLight.color = new Color(1, 1, 1);
+                if(time.isNight)
+                {
+                    sunLight.color = time.nightColor;
+                }
+                else
+                {
+                    sunLight.color = time.dayColor;
+                }
+                
             }
 
         }
