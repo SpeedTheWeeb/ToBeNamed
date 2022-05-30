@@ -41,9 +41,14 @@ public class CutRope : MonoBehaviour
                         break;
                 }
                 interactedObj.SetActive(false);
-                anchor.SetActive(false);
+                Invoke("RemoveRope", 2.0f);
             }
         }
+    }
+
+    void RemoveRope()
+    {
+        anchor.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
