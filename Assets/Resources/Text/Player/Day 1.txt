@@ -1,3 +1,4 @@
 Knife:This is my old cutlass - we've seen many adventures together
 Potion:THE SAUCE!!!
 Candle:They found a candle... Good for them!
+Key:This key fits the gate to the armory downstairs.
