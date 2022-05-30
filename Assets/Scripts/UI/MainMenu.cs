@@ -32,5 +32,5 @@ public class MainMenu : MonoBehaviour
         if (playbackState != PLAYBACK_STATE.STOPPED)
             bgmLoop.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         Application.Quit();
-    }
+    }   
 }
