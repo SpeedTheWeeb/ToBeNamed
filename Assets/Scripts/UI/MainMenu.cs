@@ -46,6 +46,11 @@ public class MainMenu : MonoBehaviour
             {
                 Destroy(o);
             }
+            Destroy(GameObject.Find("Antidote"));
+            Destroy(GameObject.Find("Poison"));
+            Destroy(GameObject.Find("SafeCookingPot"));
+            Destroy(GameObject.Find("Trawl"));
+
             Debug.Log($"Before: {scene.getDay1Result}, {scene.getDay2AResult}, {scene.getDay2BResult}");
 
             scene.getDay1Result = 0;
