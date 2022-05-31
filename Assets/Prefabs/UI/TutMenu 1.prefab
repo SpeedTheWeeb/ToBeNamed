@@ -202,7 +202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Once you've gathered clues during the day, or done with your ghostly activities
-    at night, you can move ahead to the next day/night by interacting with the chest
+    at night, you can move ahead to the next day/night by interacting with the coffin
     in the officer's quarters. Be sure to have settled everything that needs to be
     settled before then...
   m_isRightToLeft: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Once you've gathered clues during the day, or done with your ghostly activities
-    at night, you can move ahead to the next day/night by interacting with the chest
+    at night, you can move ahead to the next day/night by interacting with the coffin
     in the officer's quarters. Be sure to have settled everything that needs to be
     settled before then...
   m_isRightToLeft: 0

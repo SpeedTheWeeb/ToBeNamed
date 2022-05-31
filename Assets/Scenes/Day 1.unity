@@ -45131,6 +45131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4414976913841474659}
     m_Modifications:
+    - target: {fileID: 8383382528484834552, guid: 545199638541e624ea8e5f911842a357, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8383382528862671957, guid: 545199638541e624ea8e5f911842a357, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -45178,6 +45182,10 @@ PrefabInstance:
     - target: {fileID: 8383382528862671978, guid: 545199638541e624ea8e5f911842a357, type: 3}
       propertyPath: m_Name
       value: TutMenu 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383382528862671978, guid: 545199638541e624ea8e5f911842a357, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8383382529019662575, guid: 545199638541e624ea8e5f911842a357, type: 3}
       propertyPath: m_IsActive
