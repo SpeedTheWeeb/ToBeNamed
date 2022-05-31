@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using FMODUnity;
 using FMOD.Studio;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
     public EventInstance bgmLoop;
     PLAYBACK_STATE playbackState;
     AudioManager audiomanager;
-
+    GameObject scriptobj;
     void Start()
     {
         audiomanager = FindObjectOfType<AudioManager>();
@@ -19,7 +20,6 @@ public class MainMenu : MonoBehaviour
         bgmLoop.getPlaybackState(out playbackState);
         DestroyAll();
     }
-
     public void PlayGame () 
     {        
         if (playbackState != PLAYBACK_STATE.STOPPED)
@@ -37,13 +37,26 @@ public class MainMenu : MonoBehaviour
 
     public void DestroyAll() 
     {
-        Destroy(GameObject.Find("Captain5"));
-        Destroy(GameObject.Find("Main Camera"));
-        Destroy(GameObject.Find("Canvas"));
-        Destroy(GameObject.Find("ScriptObj"));
-        Destroy(GameObject.Find("Text Canvas"));
-        Destroy(GameObject.Find("SleepingCrew"));
-        Destroy(GameObject.Find("Directional Light"));
-        Destroy(GameObject.Find("SwitchCube"));
+        try
+        {
+            scriptobj = GameObject.Find("ScriptObj");
+            SceneChanger scene = scriptobj.GetComponent<SceneChanger>();
+
+            foreach(GameObject o in scene.gameObjects)
+            {
+                Destroy(o);
+            }
+            Debug.Log($"Before: {scene.getDay1Result}, {scene.getDay2AResult}, {scene.getDay2BResult}");
+
+            scene.getDay1Result = 0;
+            scene.getDay2AResult = 0;
+            scene.getDay2BResult = 0;
+
+            Debug.Log($"After: {scene.getDay1Result}, {scene.getDay2AResult}, {scene.getDay2BResult}");
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e);
+        }
     }   
 }
