@@ -96,7 +96,16 @@ public class PlayerInteract : MonoBehaviour
     {
         if(other.CompareTag("Object") || other.name == "LabelSwap" || other.name == "Armory door (flipable)")
         {
-            interactText.text = "Interact";
+            switch(other.tag)
+            {
+                case "Object":            
+                    interactText.text = "Interact";
+                    break;
+                case "NPC":
+                    interactText.text = "Eavesdrop";
+                    break;
+            }
+
             interactText.gameObject.SetActive(false);
             interact = false;
             _object = null;
